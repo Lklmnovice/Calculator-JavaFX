@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" opacity="0.9" style="-fx-background-color: #000000; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+    <children>
+        <VBox fx:id="body" layoutY="2.0" prefHeight="351.0" prefWidth="286.0">
+            <children>
+                <AnchorPane fx:id="textPane" prefHeight="125.0" prefWidth="286.0">
+                    <children>
+                        <VBox layoutX="14.0" layoutY="7.6875">
+                            <children>
+                                <Text fx:id="warningFiled" fill="WHITE" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert your expression" wrappingWidth="257.240234375">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <Text fx:id="expressionField" fill="WHITE" layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="257.240234375">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <Text fx:id="numberField" fill="WHITE" layoutX="14.0" layoutY="108.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="257.240234375">
+                                    <font>
+                                        <Font size="35.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <GridPane fx:id="optionsGrid" alignment="CENTER" hgap="5.0" layoutX="14.0" layoutY="160.0" maxHeight="218.0" maxWidth="276.0" minHeight="218.0" minWidth="276.0" prefHeight="218.0" prefWidth="276.0" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="20.0" prefHeight="25.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="btnAC" onAction="#allClear" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #f60100; -fx-padding: 0.1em 0.57em;" text="AC" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font></Button>
+                        <Button fx:id="btnBracketLeft" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text="(" textFill="WHITE" GridPane.columnIndex="2">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFunction_div" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text="/" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnBracketRight" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text=")" textFill="WHITE" GridPane.columnIndex="3">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFunction_mul" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFunction_add" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFunction_sub" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #0070f7; -fx-padding: 0.1em 0.57em;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number7" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number8" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number9" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number4" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number5" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number6" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number1" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number2" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number3" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number0" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_number_dot" onAction="#insert" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #002540; -fx-padding: 0.1em 0.57em;" text="." textFill="WHITE" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnFunction_equal" onAction="#eval" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #f60100; -fx-padding: 0.1em 0.57em;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold Italic" size="22.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnDelete" onAction="#delete" prefHeight="487.0" prefWidth="743.0" style="-fx-background-color: #f60100; -fx-padding: 0.1em 0.57em;" text="DEL" textFill="WHITE" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Bold Italic" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" />
+                    </VBox.margin>
+                </GridPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
